@@ -1,0 +1,165 @@
+/* WeeklyBlocks marketing site — warm theme, light mode only */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: #FAF7F1;
+  color: #1F1B16;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 32px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header,
+main,
+footer {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #E8E1D4;
+  margin-bottom: 32px;
+}
+
+.wordmark {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+}
+
+.tabs {
+  display: flex;
+  gap: 16px;
+}
+
+.tab {
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding: 4px 2px;
+  font-family: inherit;
+  font-size: 15px;
+  color: #5C544A;
+  cursor: pointer;
+}
+
+.tab:focus-visible {
+  outline: 2px solid #2C5F8D;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.tab.active {
+  color: #1F1B16;
+  font-weight: 600;
+  border-bottom-color: #2C5F8D;
+}
+
+main h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+main h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+main h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.25em;
+}
+
+main p {
+  margin-bottom: 1em;
+}
+
+.effective-date {
+  font-size: 14px;
+  color: #5C544A;
+  margin-bottom: 1.5em;
+}
+
+.email-pill {
+  display: inline-block;
+  background-color: #F0EAD9;
+  border: 1px solid #E8E1D4;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.email-pill a {
+  display: inline-block;
+  padding: 4px 10px;
+  color: #2C5F8D;
+  text-decoration: none;
+}
+
+.email-pill a:hover,
+.email-pill a:focus-visible {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  padding-bottom: 16px;
+  border-top: 1px solid #E8E1D4;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer a {
+  color: #5C544A;
+  text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus-visible {
+  color: #2C5F8D;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  main h1 {
+    font-size: 24px;
+  }
+
+  .tab {
+    font-size: 14px;
+  }
+}

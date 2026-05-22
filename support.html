@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Destek — WeeklyBlocks</title>
+  <meta name="description" content="WeeklyBlocks iOS uygulaması için destek, sık sorulan sorular ve iletişim bilgileri.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="wordmark">WeeklyBlocks</div>
+    <div class="tabs" role="tablist" aria-label="Dil / Language">
+      <button id="tab-tr" role="tab" aria-selected="true" aria-controls="panel-tr" class="tab active">Türkçe</button>
+      <button id="tab-en" role="tab" aria-selected="false" aria-controls="panel-en" class="tab">English</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="panel-tr" role="tabpanel" aria-labelledby="tab-tr">
+      <h1>Destek</h1>
+
+      <p>WeeklyBlocks, alışkanlıklarınızı haftalık bloklara bölerek takip etmenizi sağlayan, tamamen çevrimdışı bir iOS uygulamasıdır.</p>
+
+      <h2>Yardım almak istiyorsanız</h2>
+      <p>Soru, hata bildirimi, öneri veya geri bildirim için doğrudan yazabilirsiniz:</p>
+      <p><span class="email-pill"><a href="mailto:muhammetsivgin@outlook.com">muhammetsivgin@outlook.com</a></span></p>
+      <p>Mümkün olduğunca hızlı cevap vermeye çalışırım. Hata bildirirken cihaz modelinizi ve iOS sürümünüzü belirtmeniz çok yardımcı olur.</p>
+
+      <h2>Sık sorulanlar</h2>
+
+      <h3>Verilerim bir yere gönderiliyor mu?</h3>
+      <p>Hayır. Uygulama hiçbir sunucuya bağlanmaz. Tüm verileriniz cihazınızda kalır. Detay için Gizlilik Politikasına bakabilirsiniz.</p>
+
+      <h3>Uygulamayı silersem verilerim ne olur?</h3>
+      <p>Verileriniz cihazınızla birlikte silinir. Bulut yedeği yoktur. Önemli verileriniz varsa silmeden önce ekran görüntüsü almanızı öneririz.</p>
+
+      <h3>Dil değiştirebilir miyim?</h3>
+      <p>Evet. Ayarlar > Dil bölümünden Türkçe ve İngilizce arasında geçiş yapabilirsiniz. Dil değişikliği uygulamayı yeniden başlatır.</p>
+
+      <h3>Bildirimler çalışmıyor.</h3>
+      <p>Bildirim izinlerini iOS Ayarlar > Bildirimler > WeeklyBlocks altından kontrol edebilirsiniz. Haftalık hatırlatma her Pazar gönderilir ve uygulama içi Ayarlar sayfasından açılıp kapanabilir.</p>
+
+      <h3>Yeni bir özellik istiyorum.</h3>
+      <p>Öneriler için yukarıdaki email adresine yazın. Tüm geri bildirimler okunur, ileri sürümlerde değerlendirilir.</p>
+    </div>
+
+    <div id="panel-en" role="tabpanel" aria-labelledby="tab-en" hidden aria-hidden="true">
+      <h1>Support</h1>
+
+      <p>WeeklyBlocks is a fully offline iOS app that helps you track habits by breaking them into weekly blocks.</p>
+
+      <h2>Getting help</h2>
+      <p>For questions, bug reports, suggestions, or feedback, write directly:</p>
+      <p><span class="email-pill"><a href="mailto:muhammetsivgin@outlook.com">muhammetsivgin@outlook.com</a></span></p>
+      <p>I try to reply as quickly as possible. When reporting a bug, including your device model and iOS version is very helpful.</p>
+
+      <h2>Frequently asked</h2>
+
+      <h3>Is my data sent anywhere?</h3>
+      <p>No. The app never connects to a server. All your data stays on your device. See the Privacy Policy for details.</p>
+
+      <h3>What happens to my data if I delete the app?</h3>
+      <p>Your data is deleted along with the app. There are no cloud backups. If you have important data, consider taking screenshots before uninstalling.</p>
+
+      <h3>Can I change the language?</h3>
+      <p>Yes. Settings > Language lets you switch between Turkish and English. Changing the language restarts the app.</p>
+
+      <h3>Notifications aren't working.</h3>
+      <p>Check notification permissions under iOS Settings > Notifications > WeeklyBlocks. The weekly reminder is sent every Sunday and can be toggled from the in-app Settings page.</p>
+
+      <h3>I'd like to request a feature.</h3>
+      <p>Send suggestions to the email above. All feedback is read and considered for future releases.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p><a href="privacy.html">Gizlilik Politikası / Privacy Policy</a></p>
+  </footer>
+
+  <script>
+    (function () {
+      var tabs = document.querySelectorAll('[role="tab"]');
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var targetId = tab.getAttribute('aria-controls');
+          tabs.forEach(function (t) {
+            var isActive = t === tab;
+            t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            t.classList.toggle('active', isActive);
+            var panel = document.getElementById(t.getAttribute('aria-controls'));
+            if (isActive) {
+              panel.removeAttribute('hidden');
+              panel.setAttribute('aria-hidden', 'false');
+            } else {
+              panel.setAttribute('hidden', '');
+              panel.setAttribute('aria-hidden', 'true');
+            }
+          });
+          document.documentElement.lang = (targetId === 'panel-tr') ? 'tr' : 'en';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

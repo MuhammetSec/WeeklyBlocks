@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gizlilik Politikası — WeeklyBlocks</title>
+  <meta name="description" content="WeeklyBlocks iOS uygulamasının gizlilik politikası. Veri toplamıyoruz, hesap istemiyoruz, çevrimdışı çalışır.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="wordmark">WeeklyBlocks</div>
+    <div class="tabs" role="tablist" aria-label="Dil / Language">
+      <button id="tab-tr" role="tab" aria-selected="true" aria-controls="panel-tr" class="tab active">Türkçe</button>
+      <button id="tab-en" role="tab" aria-selected="false" aria-controls="panel-en" class="tab">English</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="panel-tr" role="tabpanel" aria-labelledby="tab-tr">
+      <h1>Gizlilik Politikası</h1>
+      <p class="effective-date">Yürürlük tarihi: 22 Mayıs 2026</p>
+
+      <p>WeeklyBlocks, alışkanlıklarınızı haftalık bloklara bölerek takip etmenizi sağlayan bir iOS uygulamasıdır. Uygulamayı kullandığınızda gizliliğiniz bizim için önceliklidir.</p>
+
+      <h2>Toplanan veri</h2>
+      <p>WeeklyBlocks hiçbir kişisel veri toplamaz. Hesap oluşturmanız gerekmez, oturum açmazsınız, bize kimliğinizi söylemezsiniz.</p>
+      <p>Uygulama hiçbir sunucuya bağlanmaz. Verileriniz — oturumlarınız, bloklarınız, ayarlarınız — yalnızca kendi cihazınızda kalır ve sadece siz erişebilirsiniz.</p>
+
+      <h2>Üçüncü taraflar</h2>
+      <p>WeeklyBlocks üçüncü taraf hizmetler kullanmaz. Reklam ağı, analitik servis, kullanım takibi, çökme raporlama — hiçbiri yok. Uygulamada hiçbir üçüncü taraf SDK yüklü değildir.</p>
+
+      <h2>Bildirimler</h2>
+      <p>İsterseniz haftada bir Pazar günü hatırlatma bildirimi alabilirsiniz. Bu bildirim cihazınızda lokal olarak planlanır; hiçbir sunucudan gönderilmez. İstediğiniz zaman iOS Ayarlar uygulamasından kapatabilirsiniz.</p>
+
+      <h2>Veri silme</h2>
+      <p>Verilerinizi silmek için uygulamayı cihazınızdan kaldırmanız yeterlidir. iOS, uygulamayla birlikte tüm verilerini siler. Yedek veya bulut kopyası yoktur çünkü uygulama hiçbir veriyi bizim tarafımıza göndermez.</p>
+
+      <h2>Çocuklar</h2>
+      <p>WeeklyBlocks tüm yaş grupları için uygundur (4+). 13 yaş altı çocuklardan veya başka herhangi bir kullanıcıdan bilerek hiçbir kişisel veri toplamayız.</p>
+
+      <h2>Değişiklikler</h2>
+      <p>Bu politikada değişiklik olursa bu sayfa güncellenir ve yürürlük tarihi yenilenir. Önemli bir değişiklik olursa, uygulamanın bir sonraki sürümünde bu konuyu belirtmeye çalışırız.</p>
+
+      <h2>İletişim</h2>
+      <p>Soru, geri bildirim veya talepleriniz için:</p>
+      <p><span class="email-pill"><a href="mailto:muhammetsivgin@outlook.com">muhammetsivgin@outlook.com</a></span></p>
+    </div>
+
+    <div id="panel-en" role="tabpanel" aria-labelledby="tab-en" hidden aria-hidden="true">
+      <h1>Privacy Policy</h1>
+      <p class="effective-date">Effective date: May 22, 2026</p>
+
+      <p>WeeklyBlocks is an iOS app that helps you track habits by breaking them into weekly blocks. Your privacy is our priority.</p>
+
+      <h2>Data we collect</h2>
+      <p>WeeklyBlocks collects no personal data. You don't create an account, you don't sign in, you never tell us who you are.</p>
+      <p>The app never connects to any server. Your data — your sessions, your blocks, your settings — stays on your device and is accessible only to you.</p>
+
+      <h2>Third parties</h2>
+      <p>WeeklyBlocks uses no third-party services. No ad networks, no analytics, no usage tracking, no crash reporting. There are no third-party SDKs embedded in the app.</p>
+
+      <h2>Notifications</h2>
+      <p>If you opt in, you can receive an optional weekly reminder every Sunday. This notification is scheduled locally on your device; it is never sent from a server. You can turn it off any time from the iOS Settings app.</p>
+
+      <h2>Data deletion</h2>
+      <p>To delete your data, simply uninstall the app from your device. iOS removes all app data along with the app itself. There are no backups or cloud copies because the app never sends any data to us.</p>
+
+      <h2>Children</h2>
+      <p>WeeklyBlocks is suitable for all ages (4+). We do not knowingly collect any personal data from children under 13 or from any other user.</p>
+
+      <h2>Changes</h2>
+      <p>If this policy changes, this page will be updated and the effective date will be revised. For material changes, we'll try to note them in the next release of the app.</p>
+
+      <h2>Contact</h2>
+      <p>For questions, feedback, or requests:</p>
+      <p><span class="email-pill"><a href="mailto:muhammetsivgin@outlook.com">muhammetsivgin@outlook.com</a></span></p>
+    </div>
+  </main>
+
+  <footer>
+    <p><a href="support.html">Destek / Support</a></p>
+  </footer>
+
+  <script>
+    (function () {
+      var tabs = document.querySelectorAll('[role="tab"]');
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var targetId = tab.getAttribute('aria-controls');
+          tabs.forEach(function (t) {
+            var isActive = t === tab;
+            t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            t.classList.toggle('active', isActive);
+            var panel = document.getElementById(t.getAttribute('aria-controls'));
+            if (isActive) {
+              panel.removeAttribute('hidden');
+              panel.setAttribute('aria-hidden', 'false');
+            } else {
+              panel.setAttribute('hidden', '');
+              panel.setAttribute('aria-hidden', 'true');
+            }
+          });
+          document.documentElement.lang = (targetId === 'panel-tr') ? 'tr' : 'en';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
