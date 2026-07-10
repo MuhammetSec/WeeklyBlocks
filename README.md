@@ -1,6 +1,6 @@
 # WeeklyBlocks
 
-Marketing site for the WeeklyBlocks iOS app — a fully offline weekly habit tracker. This repository hosts the privacy policy and support pages required by Apple for App Store submission. Served via GitHub Pages.
+Marketing site for the WeeklyBlocks iOS app — an offline-first weekly habit tracker with optional backup to the user's own private iCloud. This repository hosts the privacy policy and support pages required by Apple for App Store submission. Served via GitHub Pages.
 
 ## Pages
 
@@ -9,4 +9,4 @@ Marketing site for the WeeklyBlocks iOS app — a fully offline weekly habit tra
 
 ## App
 
-Available on the App Store: [link will be added after launch]
+Available on the App Store: [WeeklyBlocks on the App Store](https://apps.apple.com/tr/app/weeklyblocks/id6772327890)
